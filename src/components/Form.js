@@ -20,18 +20,14 @@ class Form extends Component {
             <form>
                 <h3>Name:</h3>
                 <input type="text" placeholder="Enter your name"/>
-                <h3>Email:
-                </h3>
+                <h3>Email:</h3>
                 <input type="text" placeholder="Enter your email"/>
-                <h3>Phone:
-                </h3>
+                <h3>Phone:</h3>
                 <input type="text" placeholder="Enter your phone number"/>
-                <h3>Blog URL:
-                </h3>
+                <h3>Blog URL:</h3>
                 <input type="text" placeholder="Enter your blog URL"/>
                 <div className="small-6 small-centered text-center columns">
                     <button className="button success expand round text-center">Verify</button>
-                    <p className="validation-message">Form is Incomplete!</p>
                 </div>
             </form>
         </div>);
