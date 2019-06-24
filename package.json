@@ -18,7 +18,7 @@
     "prestart": "npm install",
     "start": "./node_modules/.bin/react-scripts start",
     "pretest": "npm install",
-    "test": "./node_modules/.bin/react-scripts test --verbose"
+    "test": "rm -rf ./unit.xml; CI=true TEST_REPORT_FILENAME=./unit.xml ./node_modules/.bin/react-scripts test --verbose --env=jsdom --testResultsProcessor ./node_modules/jest-junit-reporter"
   },
   "devDependencies": {
     "chai": "^4.1.2",
