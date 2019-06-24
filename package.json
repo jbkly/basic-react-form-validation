@@ -16,7 +16,7 @@
   },
   "scripts": {
     "prestart": "npm install",
-    "start": "HOST=0.0.0.0 PORT=8000 ./node_modules/.bin/react-scripts start",
+    "start": "./node_modules/.bin/react-scripts start",
     "pretest": "npm install",
     "test": "rm -rf ./unit.xml; CI=true TEST_REPORT_FILENAME=./unit.xml ./node_modules/.bin/react-scripts test --verbose --env=jsdom --testResultsProcessor ./node_modules/jest-junit-reporter"
   },
