@@ -34,10 +34,10 @@ describe('Form Validation <App />', () => {
   it('check entire form validation when the form is valid', () => {
     let formSpy = spy();
     const form = mount(<Form isFormValid={formSpy} />);
-    form.find('.name').simulate('change', { target: { value: 'sasrank' } });
-    form.find('.email').simulate('change', { target: { value: 'aasdbc@xyz.com' } });
-    form.find('.phone').simulate('change', { target: { value: '9856756756' } });
-    form.find('.url').simulate('change', { target: { value: 'http://google.com' } });
+    form.find('.name').simulate('change', { target: { value: 'sasrank', name: 'name' } });
+    form.find('.email').simulate('change', { target: { value: 'aasdbc@xyz.com', name: 'email' } });
+    form.find('.phone').simulate('change', { target: { value: '9856756756', name: 'phone' } });
+    form.find('.url').simulate('change', { target: { value: 'http://google.com', name: 'blogURL' } });
     form.find('.button').simulate('click');
     expect(formSpy.calledWith(true)).toEqual(true);
   });
@@ -45,10 +45,10 @@ describe('Form Validation <App />', () => {
   it('check entire form validation when the phone number is invalid', () => {
     let formSpy = spy();
     const form = mount(<Form isFormValid={formSpy} />);
-    form.find('.name').simulate('change', { target: { value: 'ui' } });
-    form.find('.email').simulate('change', { target: { value: 'abc@xyz.com' } });
-    form.find('.phone').simulate('change', { target: { value: '56756756' } });
-    form.find('.url').simulate('change', { target: { value: 'http://google.com' } });
+    form.find('.name').simulate('change', { target: { value: 'ui', name: 'name' } });
+    form.find('.email').simulate('change', { target: { value: 'abc@xyz.com', name: 'email' } });
+    form.find('.phone').simulate('change', { target: { value: '56756756', name: 'phone' } });
+    form.find('.url').simulate('change', { target: { value: 'http://google.com', name: 'blogURL' } });
     form.find('.button').simulate('click');
     expect(formSpy.calledWith(true)).toEqual(false);
   });
@@ -56,10 +56,10 @@ describe('Form Validation <App />', () => {
   it('check entire form validation when the email is invalid', () => {
     let formSpy = spy();
     const form = mount(<Form isFormValid={formSpy} />);
-    form.find('.name').simulate('change', { target: { value: 'ui' } });
-    form.find('.email').simulate('change', { target: { value: 'abc@xyz.' } });
-    form.find('.phone').simulate('change', { target: { value: '56756756' } });
-    form.find('.url').simulate('change', { target: { value: 'http://google.com' } });
+    form.find('.name').simulate('change', { target: { value: 'ui', name: 'name' } });
+    form.find('.email').simulate('change', { target: { value: 'abc@xyz.', name: 'email' } });
+    form.find('.phone').simulate('change', { target: { value: '9856756756', name: 'phone' } });
+    form.find('.url').simulate('change', { target: { value: 'http://google.com', name: 'blogURL' } });
     form.find('.button').simulate('click');
     expect(formSpy.calledWith(true)).toEqual(false);
   });
@@ -67,10 +67,10 @@ describe('Form Validation <App />', () => {
   it('check entire form validation when the url is invalid', () => {
     let formSpy = spy();
     const form = mount(<Form isFormValid={formSpy} />);
-    form.find('.name').simulate('change', { target: { value: 'ui' } });
-    form.find('.email').simulate('change', { target: { value: 'abc@xyz.com' } });
-    form.find('.phone').simulate('change', { target: { value: '56756756' } });
-    form.find('.url').simulate('change', { target: { value: 'ht' } });
+    form.find('.name').simulate('change', { target: { value: 'ui', name: 'name' } });
+    form.find('.email').simulate('change', { target: { value: 'abc@xyz.com', name: 'email' } });
+    form.find('.phone').simulate('change', { target: { value: '9856756756', name: 'phone' } });
+    form.find('.url').simulate('change', { target: { value: 'ht', name: 'blogURL' } });
     form.find('.button').simulate('click');
     expect(formSpy.calledWith(true)).toEqual(false);
   });
@@ -78,10 +78,10 @@ describe('Form Validation <App />', () => {
   it('check form validation when the entire form is invalid', () => {
     let formSpy = spy();
     const form = mount(<Form isFormValid={formSpy} />);
-    form.find('.name').simulate('change', { target: { value: '' } });
-    form.find('.email').simulate('change', { target: { value: '33' } });
-    form.find('.phone').simulate('change', { target: { value: '567567560' } });
-    form.find('.url').simulate('change', { target: { value: 'h9' } });
+    form.find('.name').simulate('change', { target: { value: '', name: 'name' } });
+    form.find('.email').simulate('change', { target: { value: '33', name: 'email' } });
+    form.find('.phone').simulate('change', { target: { value: '567567560', name: 'phone' } });
+    form.find('.url').simulate('change', { target: { value: 'h9', name: 'blogURL' } });
     form.find('.button').simulate('click');
     expect(formSpy.calledWith(true)).toEqual(false);
   });

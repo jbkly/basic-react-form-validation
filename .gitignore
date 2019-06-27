@@ -6,6 +6,7 @@
 # testing
 /coverage
 unit.xml
+test-report.xml
 
 # production
 /build

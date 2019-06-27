@@ -15,10 +15,10 @@
     "event-stream": "3.3.4"
   },
   "scripts": {
-    "prestart": "npm install",
     "start": "./node_modules/.bin/react-scripts start",
     "pretest": "npm install",
-    "test": "rm -rf ./unit.xml; CI=true TEST_REPORT_FILENAME=./unit.xml ./node_modules/.bin/react-scripts test --verbose --env=jsdom --testResultsProcessor ./node_modules/jest-junit-reporter"
+    "test": "rm -rf ./unit.xml; CI=true TEST_REPORT_FILENAME=./unit.xml ./node_modules/.bin/react-scripts test --verbose --env=jsdom --testResultsProcessor ./node_modules/jest-junit-reporter",
+    "test-local": "./node_modules/.bin/react-scripts test --env=jsdom"
   },
   "devDependencies": {
     "chai": "^4.1.2",

@@ -16,3 +16,8 @@ form {
  width: 60%;
  font-size: 1.3em;
 }
+
+.field-validation-error {
+  font-size: 0.8em;
+  color: red;
+}

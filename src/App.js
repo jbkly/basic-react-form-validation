@@ -10,9 +10,13 @@ class App extends Component {
       };
     }
 
+    isFormValid = (isValid) => {
+      this.setState({ isValid });
+    };
+
     render() {
         return (<div>
-            <Form></Form>
+            <Form isFormValid={this.isFormValid}></Form>
             <Message isValid={this.state.isValid}></Message>
         </div>);
     }
